@@ -11,7 +11,6 @@ export class AppComponent {
   title = 'untitled';
   listBackgroundChoose = [];
   private intervalId = 0;
-  message = '';
   count = 5;
   remainingTime = this.count;
   backgroundShow = '';
@@ -38,7 +37,8 @@ export class AppComponent {
   reset() {
     this.clearTimer();
     this.remainingTime = this.count;
-    this.message = `Click start button to start the Countdown`;
+    this.index = 0
+    this.backgroundShow = this.listBackgroundChoose[0];
   }
   index = 0;
   private countDown() {
